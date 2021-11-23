@@ -94,25 +94,21 @@ Out of these we have [15,663 five-star non-vine reviews](https://github.com/neer
 ![](https://github.com/neerajain9/Amazon_Vine_Analysis/blob/Data-Science/Resources/5-Star%20Non-Vine%20Review.png?raw=true)
 
 #
-### 3. [Percentage of Five-Star Review](https://github.com/neerajain9/Amazon_Vine_Analysis/blob/Data-Science/Resources/final_modified.png)
+### 3. [Percentage of Five-Star Review](https://github.com/neerajain9/Amazon_Vine_Analysis/blob/Data-Science/Resources/final.png)
 
 **Five-Star Vine Reviews**
-We have 51.06 % five-star vine reviews. 
+We have 0.12% five-star vine reviews. 
 
 **Five-Star Non-Vine Reviews**
-We have 38.7 % five-star non-vine reviews.
+We have 38.61% five-star non-vine reviews. 
 
-![](https://github.com/neerajain9/Amazon_Vine_Analysis/blob/Data-Science/Resources/final_modified.png?raw=true)
+![](https://github.com/neerajain9/Amazon_Vine_Analysis/blob/Data-Science/Resources/final.png?raw=true)
 
-## [Summary](https://github.com/neerajain9/Amazon_Vine_Analysis/blob/Data-Science/Resources/entire%20DS_Modified.png)
+## [Summary](https://github.com/neerajain9/Amazon_Vine_Analysis/blob/Data-Science/Resources/entire%20DS.png)
 
-We do sense some bias in the vine reviews.
+We do not see any bias in vine reviews. Ususally, these are low in numbers and our vine review percentage is on 0.12%.
 
-To ensure, we looked at the entire data set and we found out that five-star vine reviews dropped from 51.06 % to 37.45 % and five-star non-vine reviews bumpped up from 38.7 % to 57.54 %. This confirms that there is some bias in the vine reviews.
+To ensure, I looked at the entire data set and we found out that this percentage drops to 0.09%. This confirms that there is not bias in vine review.
 
-![](https://github.com/neerajain9/Amazon_Vine_Analysis/blob/Data-Science/Resources/entire%20DS_Modified.png?raw=true)
+![](https://github.com/neerajain9/Amazon_Vine_Analysis/blob/Data-Science/Resources/entire%20DS.png?raw=true)
 
-**Recommendation:**
-As we investigated the issue, it appears that helpful_votes data was manupulated in some way that is causing this discrepancy.
-
-We do not understand the reason why we considered "(helpful_votes/total_votes) > 50%" filter. Perhaps, we can remove this filter to validate our hypothesis.

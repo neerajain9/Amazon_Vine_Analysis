@@ -73,14 +73,14 @@ SET five_star_reviews =(SELECT count(*) FROM vine_table WHERE star_rating = 5);
 --************************************************************ 
 UPDATE
 analysis_table
-SET pct_five_star_reviews_Y =((SELECT count(*) FROM vine_table WHERE star_rating = 5 AND vine = 'Y')/CAST(total_reviews AS FLOAT));
+SET pct_five_star_reviews_Y =((SELECT count(*) FROM vine_table WHERE star_rating = 5 AND vine = 'Y')/CAST((SELECT count(*) FROM vine_table WHERE vine = 'Y') AS FLOAT));
 
 --STEP-5************************************************************ 
 --(d) The percentage of 5-star Reviews (for non-Vine reviews)
 --************************************************************ 
 UPDATE
 analysis_table
-SET pct_five_star_reviews_N =((SELECT count(*) FROM vine_table WHERE star_rating = 5 AND vine = 'N')/CAST(total_reviews AS FLOAT));
+SET pct_five_star_reviews_N =((SELECT count(*) FROM vine_table WHERE star_rating = 5 AND vine = 'N')/CAST((SELECT count(*) FROM vine_table WHERE vine = 'N') AS FLOAT));
 
 SELECT * FROM analysis_table
 
